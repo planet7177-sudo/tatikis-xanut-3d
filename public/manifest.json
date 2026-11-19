@@ -1,0 +1,12 @@
+{
+  "name": "Tatikis Xanut 3D",
+  "short_name": "Tatikis Xanut",
+  "description": "Симулятор ереванского магазинчика от первого лица",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1c1209",
+  "theme_color": "#8B4513",
+  "lang": "hy",
+  "icons": []
+}
