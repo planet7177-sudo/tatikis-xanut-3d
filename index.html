@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#8B4513" />
+  <meta name="description" content="Tatikis Xanut 3D — симулятор ереванского магазинчика" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="/manifest.json" />
+  <title>Tatikis Xanut 3D</title>
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="start-screen" class="screen active">
+      <div class="start-panel">
+        <div class="logo-arm">🛒</div>
+        <h1>Tatikis Xanut 3D</h1>
+        <p class="subtitle">Երևանյան խանութի սիմուլյատոր</p>
+        <p class="desc">Симулятор ереванского магазинчика.<br>Вы — хозяйка лавки. Рабочий день начинается.</p>
+        <button id="btn-start" class="btn primary">Смена бацел / Начать смену</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hidden">
+      <div class="top-bar">
+        <div class="stat cash">֏ <span id="cash">15000</span></div>
+        <div class="stat sold">Продано: <span id="sold">0</span></div>
+        <div class="stat stock">На полках: <span id="stock">24</span></div>
+      </div>
+
+      <div id="speech" class="speech hidden">
+        <div class="speech-hy" id="speech-hy"></div>
+        <div class="speech-ru" id="speech-ru"></div>
+      </div>
+
+      <div class="bottom-bar">
+        <button class="action-btn" data-phrase="greet">Barev dzez, jan!</button>
+        <button class="action-btn" data-phrase="lavash">Tarm lavash ka!</button>
+        <button class="action-btn" data-phrase="debt">Grir tetri mej...</button>
+        <button class="action-btn primary" id="btn-serve">Обслужить (E)</button>
+        <button class="action-btn warn" id="btn-restock">Закупить (-2000 ֏)</button>
+      </div>
+
+      <div id="joystick" class="joystick hidden">
+        <div class="joy-base"><div class="joy-stick" id="joy-stick"></div></div>
+      </div>
+
+      <div class="hint" id="hint">WASD — ходить · Мышь — смотреть · E — обслужить клиента</div>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
